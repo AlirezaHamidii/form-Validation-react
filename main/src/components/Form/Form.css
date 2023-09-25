@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+    background: radial-gradient(circle, rgba(11, 104, 134, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background-color: rgb(235, 235, 235);
+    /* margin: auto; */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.521), 0 5px 5px 0 rgba(0, 0, 0, 0.671);
+    padding: 10px;
+    transition: all 0.2s ease-in;
+}
+
+.form-container:hover {
+    box-shadow: 0 0 20px 0 rgba(255, 0, 0, 0.664), 0 10px 10px rgba(255, 0, 0, 0.76);
+    border-radius: 5px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.success-message {
+    font-family: "Roboto", sans-serif;
+    color: #0950bb;
+    text-align: center;
+    padding: 15px;
+    background: rgb(185, 232, 253);
+}
+
+.form-field {    
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 15px;
+    font-size: 16px;
+    border: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+span {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    color: darkred;
+    text-align: center;
+    background-color: #ffa4a4;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+input {
+    background: #e6e6e6;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid cadetblue;
+}
+
+.error {
+    border-style: solid;
+    border: 2px solid #ffa4a4;
+}
+button {
+    width: 50%;
+    margin: auto !important;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    letter-spacing: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn6 {
+    border: 2px solid #17C3B2;
+    color: #19524c;
+    text-shadow: 1px 1px 1em red, 0 0 2em cadetblue, 0 0 0.2em rgb(0, 0, 255);
+    letter-spacing: 0.3rem;
+}
+.btn6::before {
+    content: '';
+    width: 0;
+    height: 500%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #17C3B2 !important;
+    transition: all 0.5s linear;
+    display: block;
+    z-index: -1;
+}
+
+.btn6:hover::before {
+    opacity: 1;
+    width: 105%;
+}
+
+.btn6:hover {
+    color: white;
+    text-shadow: none;
+}
